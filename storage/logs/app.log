@@ -1,0 +1,10 @@
+[2026-04-21 06:48:04] Processing reading for device_id=1
+[2026-04-21 06:48:04] Alert created: device=1, type=voltage_abnormal, severity=critical
+[2026-04-21 06:48:04] Alert created: device=1, type=low_power_factor, severity=medium
+[2026-04-21 06:48:04] Alert created: device=1, type=high_power_usage, severity=high
+[2026-04-21 06:48:04] Alert created: device=1, type=anomaly_detection, severity=high
+[2026-04-21 06:51:15] Processing reading for device_id=1
+[2026-04-21 06:51:15] Alert created: device=1, type=voltage_abnormal, severity=critical
+[2026-04-21 06:51:15] Alert created: device=1, type=low_power_factor, severity=medium
+[2026-04-21 06:51:16] Alert created: device=1, type=high_power_usage, severity=high
+[2026-04-21 06:51:16] Alert created: device=1, type=anomaly_detection, severity=high

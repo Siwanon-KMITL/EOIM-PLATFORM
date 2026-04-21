@@ -2,8 +2,12 @@
 
 use App\Core\Router;
 use App\Controllers\AuthController;
+use App\Controllers\AnalyticsController;
+use App\Controllers\AlertsController;
 use App\Controllers\DashboardController;
+use App\Controllers\BillingController;
 use App\Controllers\DeviceController;
+use App\Controllers\SettingsController;
 use App\Controllers\UserController;
 use App\Middleware\AuthMiddleware;
 use App\Middleware\RoleMiddleware;
@@ -23,6 +27,22 @@ Router::get('/logout', [AuthController::class, 'logout'], [
 ]);
 
 Router::get('/dashboard', [DashboardController::class, 'index'], [
+    AuthMiddleware::class
+]);
+
+Router::get('/analytics', [AnalyticsController::class, 'index'], [
+    AuthMiddleware::class
+]);
+
+Router::get('/alerts', [AlertsController::class, 'index'], [
+    AuthMiddleware::class
+]);
+
+Router::get('/settings', [SettingsController::class, 'index'], [
+    AuthMiddleware::class
+]);
+
+Router::get('/billing', [BillingController::class, 'index'], [
     AuthMiddleware::class
 ]);
 

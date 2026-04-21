@@ -174,7 +174,7 @@ class UserController extends Controller
         $profile = $this->users->findById($currentUser['id']);
 
         $this->view('profile/edit', [
-            'title' => 'แก้ไขโปรไฟล์',
+            'title' => 'โปรไฟล์ผู้ใช้',
             'user' => $currentUser,
             'profile' => $profile,
         ]);
@@ -241,7 +241,7 @@ class UserController extends Controller
         }
 
         if ($newPassword !== $confirmPassword) {
-            $_SESSION['error'] = 'รหัสผ่านใหม่และยืนยันรหัสผ่านไม่ตรงกัน';
+            $_SESSION['error'] = 'รหัสผ่านใหม่และการยืนยันรหัสผ่านไม่ตรงกัน';
             redirect('/profile/password');
         }
 

@@ -15,7 +15,7 @@ class AuthController extends Controller
             redirect('/dashboard');
         }
 
-        $this->view('auth/login', ['title' => 'Login']);
+        $this->view('auth/login', ['title' => 'เข้าสู่ระบบ']);
     }
 
     public function registerForm(): void
@@ -128,16 +128,16 @@ class AuthController extends Controller
         }
 
         $resetUrl = rtrim($appUrl, '/') . '/reset-password?token=' . urlencode($token);
-        $body = "สวัสดี {$user['name']},\n\n" .
-                "เราได้รับคำขอรีเซ็ตรหัสผ่านสำหรับบัญชีของคุณแล้ว\n" .
-                "คลิกที่ลิงก์ด้านล่างเพื่อตั้งรหัสผ่านใหม่:\n\n" .
-                "{$resetUrl}\n\n" .
-                "ลิงก์นี้จะหมดอายุใน 1 ชั่วโมง\n\n" .
-                "หากคุณไม่ได้ขอรีเซ็ต กรุณาเพิกเฉยอีเมลฉบับนี้";
+        $body = "สวัสดี {$user['name']},\n\n"
+            . "เราได้รับคำขอรีเซ็ตรหัสผ่านสำหรับบัญชีของคุณแล้ว\n"
+            . "คลิกที่ลิงก์ด้านล่างเพื่อตั้งรหัสผ่านใหม่:\n\n"
+            . "{$resetUrl}\n\n"
+            . "ลิงก์นี้จะหมดอายุใน 1 ชั่วโมง\n\n"
+            . "หากคุณไม่ได้ขอรีเซ็ต กรุณาเพิกเฉยอีเมลฉบับนี้";
 
         $sent = send_mail(
             $email,
-            'ลืมรหัสผ่าน - EOIM Platform',
+            'ลืมรหัสผ่าน - SMART METER',
             $body
         );
 

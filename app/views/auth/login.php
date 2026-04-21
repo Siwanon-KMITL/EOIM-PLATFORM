@@ -16,7 +16,7 @@
 
         <main class="metricon-login-wrap">
             <div class="metricon-login-brand">
-                <h1>METRICON</h1>
+                <h1>SMART METER</h1>
                 <p>GRID CONTROL &bull; PRECISION MONITORING</p>
             </div>
 
@@ -46,7 +46,7 @@
                                     <path d="M3 8l9 6 9-6"></path>
                                 </svg>
                             </span>
-                            <input id="email" type="email" name="email" placeholder="operator@metricon.energy" required>
+                            <input id="email" type="email" name="email" placeholder="operator@smartmeter.energy" required>
                         </div>
                     </div>
 
@@ -104,10 +104,12 @@
             </section>
 
             <p class="metricon-login-note">
-                Protected by Metricon Multi-Factor Security Protocol.<br>
+                Protected by Smart Meter Multi-Factor Security Protocol.<br>
                 Unauthorized access attempts are monitored and recorded.
             </p>
         </main>
+
+        <?php require __DIR__ . '/../partials/app_footer.php'; ?>
     </div>
 </body>
 </html>
